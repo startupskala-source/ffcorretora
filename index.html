@@ -485,6 +485,98 @@
         padding: 13px 12px;
       }
     }
+  
+    @media (max-width: 600px) {
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        background: #f7f9ff;
+      }
+
+      body {
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+
+      body::before,
+      body::after {
+        display: none;
+      }
+
+      .pagina {
+        width: 100%;
+        max-width: none;
+        min-height: 100svh;
+      }
+
+      .cartao {
+        width: 100%;
+        min-height: 100svh;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding:
+          max(34px, env(safe-area-inset-top))
+          20px
+          calc(104px + env(safe-area-inset-bottom));
+        background:
+          linear-gradient(180deg, #ffffff 0%, #f8faff 56%, #f4f7ff 100%);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .cartao::before {
+        background:
+          radial-gradient(circle at 50% 0%, rgba(45,80,251,.08), transparent 34%);
+      }
+
+      .cartao::after {
+        display: none;
+      }
+
+      .marca {
+        margin-bottom: 25px;
+      }
+
+      .logo-principal-wrap {
+        width: 144px;
+        height: 144px;
+        border-width: 4px;
+        box-shadow: none;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .botao {
+        min-height: 68px;
+        border-radius: 17px;
+        border: 1px solid rgba(45,80,251,.09);
+        box-shadow: none;
+        background: rgba(255,255,255,.72);
+      }
+
+      .botao:hover {
+        box-shadow: none;
+      }
+
+      .botao.destaque {
+        box-shadow: none;
+      }
+
+      footer {
+        margin-top: 22px;
+      }
+
+      .chat-flutuante {
+        right: 14px;
+        bottom: calc(16px + env(safe-area-inset-bottom));
+      }
+    }
+
   </style>
 </head>
 <body>
